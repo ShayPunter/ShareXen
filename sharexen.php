@@ -20,8 +20,7 @@
 // various characters nobody can ever guess
 // Random generator: https://bit.ly/2DxaTak
 define('USERS', [
-	'Mario' => 'change-me',
-	'Luigi' => 'change-me',
+	'Shay' => getenv('PASSWORD'),
 ]);
 
 // Security keys salt - NEVER SHARE THIS
@@ -34,7 +33,7 @@ define('USERS', [
 // Mandatory for having deletion URLs, set this to
 // a very long and random string of various characters
 // Random generator: https://bit.ly/2DxaTak
-define('SALT', 'change-me');
+define('SALT', getenv('SALT'));
 
 // List of allowed image extensions
 // Only put image extensions here unless
