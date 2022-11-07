@@ -1,5 +1,8 @@
 <?php
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // ShareXen - Another ShareX Custom Uploader PHP Script
 
 
@@ -20,7 +23,7 @@
 // various characters nobody can ever guess
 // Random generator: https://bit.ly/2DxaTak
 define('USERS', [
-	'Shay' => getenv('PASSWORD'),
+	'Shay' => $_ENV['PASSWORD'],
 ]);
 
 // Security keys salt - NEVER SHARE THIS
@@ -33,7 +36,7 @@ define('USERS', [
 // Mandatory for having deletion URLs, set this to
 // a very long and random string of various characters
 // Random generator: https://bit.ly/2DxaTak
-define('SALT', getenv('SALT'));
+define('SALT', $_ENV['SALT']);
 
 // List of allowed image extensions
 // Only put image extensions here unless
