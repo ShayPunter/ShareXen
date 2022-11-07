@@ -24,7 +24,7 @@ $dotenv->load();
 // various characters nobody can ever guess
 // Random generator: https://bit.ly/2DxaTak
 define('USERS', [
-	'Shay' => $_ENV['PASSWORD'],
+	$_ENV['USERNAME'] => $_ENV['PASSWORD'],
 ]);
 
 // Security keys salt - NEVER SHARE THIS
